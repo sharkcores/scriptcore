@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptCore/Home</title>
+    <link rel="stylesheet" href="C:\Users\Alex\Desktop\vs\ScriptCore.css">
+</head>
+<body>
+
+
+    <style>
+
+.divtest::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  .divtest::-webkit-scrollbar-track {
+    background: rgb(14, 14, 14);        /* color of the tracking area */
+  }
+  .divtest::-webkit-scrollbar-thumb {
+    background-color: rgb(29, 29, 29);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(63, 63, 63);  /* creates padding around scroll thumb */
+  }
+        .Title{
+            padding-left: 20px;
+            padding-right: 20px;
+display: block;
+font-family: sans-serif;
+color: white;
+text-align: center;
+text-decoration: underline;
+}
+
+.slogan{
+   
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    display: block;
+  font-size: 20px;
+  margin-top: -30px;
+    text-align: center;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body{
+    background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+    background-color: rgb(131, 131, 8);
+}
+.TypeBox{
+   text-align: center;
+   margin-top:  10px;
+}
+.MainContent{
+    margin-top: 100px;
+    display: flex;
+    display: block;
+    align-items: center;
+    user-select: none;
+background-color: orangered;
+margin-bottom: 20px;
+transition: 0.5s;
+}
+
+
+.MainContent:hover{
+    opacity: 50%;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+.TypeBox2{
+    border-style: none;
+    outline: none;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+    user-select: none;
+    font-size: medium;
+    background-color: white;
+    color: black;
+}
+.SearchBtn{
+    border-style: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    transition:  0.3s;
+    user-select: none;
+}
+.SearchBtn:hover{
+    background-color: black;
+    color: white;
+}
+.TypeBox2:hover{
+    background-color: black;
+    color: white;
+}
+
+.Topbarrr{
+    background-color: black;
+    z-index: 999;
+    user-select: none;
+    width: 100vw;
+    position: fixed;
+    margin-top: -8px;
+    
+}
+
+.Btn1, .Btn2{
+    display: inline-block;
+    border-style: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    font-size: larger;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 10px;
+transition: 0.3s;
+}
+.Btn1:hover, .Btn2:hover{
+    background-color: black;
+    opacity: 50%;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+.link{
+    color: black;
+}
+
+.Scripts, .Scripts2{
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    border-style: none;
+    border-radius: 5px;
+background-color: orangered;
+user-select: none;
+transition: 0.3s;
+display: inline-block;
+
+
+}
+.Scripts:hover{
+    background-color: black;
+    color: white;
+}
+.tags{
+   border-style: none;
+   height: 35px;
+   transition: 0.5s;
+   background-color: orangered;
+   color: white;
+   border-radius: 5px;
+}
+.tags:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+    </style>
+<div class="Topbarrr">
+
+    <a class="link" target="_blank" href="https://www.youtube.com/channel/UCck_7Hc2i2TjzoQjGbf6e0Q">
+<button class="Btn1">Youtube</button>
+</a>
+
+<a class="link" href="https://discord.gg/f45P7GNB" target="_blank">
+<button class="Btn1">Discord</button>
+</a>
+
+<a class="link" href="C:\Users\Alex\Desktop\vs\ToS.html">
+<button class="Btn1">ToS</button>
+</a>
+<a class="link" href="C:\Users\Alex\Desktop\vs\bugfixes.html">
+    <button class="Btn1">Bug fixes</button>
+</a>
+<a class="link" href="https://www.shark-core.com" target="_blank">
+    <button class="Btn1">SharkCore</button>
+</a>
+
+
+<a class="link" href="C:\Users\Alex\Desktop\vs\index.html">
+    <button class="Btn1">Home</button>
+</a>
+
+</div>
+
+</div>
+
+
+        <div style="background-color: black; border-radius: 10px; border: 1px black solid;" class="MainContent">   
+        <h1 class="Title">   ScriptCore   </h1> <br>
+        <p class="slogan">Greatest Script Libary</p>
+        
+    </div>
+    <h1 class="TypeBox"> <input class="TypeBox2" type="text" placeholder="Search the Libary"> </h1> 
+
+
+<a href="C:\Users\Alex\Desktop\vs\EnterIssue.html"><button class="SearchBtn">Enter</button></a>
+
+<p class="Scripts2">
+    <select name="Scripts" class="Scripts">
+      <option value="NewestScripts">All Scripts</option>
+    </select>
+    <a href="C:\Users\Alex\Desktop\vs\Scripts.html"><Button class="tags">Find</Button></a>
+</p>
+</body>
+</html>
