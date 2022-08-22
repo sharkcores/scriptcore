@@ -13,13 +13,13 @@
 
     <style>
 
-.divtest::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+body::-webkit-scrollbar {
+    width: 1px;               /* width of the entire scrollbar */
   }
-  .divtest::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     background: rgb(14, 14, 14);        /* color of the tracking area */
   }
-  .divtest::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb {
     background-color: rgb(29, 29, 29);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid rgb(63, 63, 63);  /* creates padding around scroll thumb */
@@ -78,7 +78,6 @@ transition: 0.3s;
 .MainContent:hover{
     opacity: 50%;
     border-style: solid;
-    border-color: red;
     border-width: 1px;
 }
 
@@ -89,30 +88,33 @@ transition: 0.3s;
     height: 30px;
     transition: 0.3s;
     user-select: none;
-    font-size: medium;
+    font-size: small;
     background-color: white;
     color: white;
     box-shadow: 0px 0px 10px orangered;
     border: 1px orangered solid;
 border-radius: none;
 background-color: transparent;
-
+width: 140px;
+margin-left: -66px;
 }
 .SearchBtn{
     border-style: none;
-    padding-left: 25px;
+    padding-left: 8px;
     padding-right: 25px;
     background-color: orangered;
     color: white;
     height: 30px;
-
     transition:  0.3s;
     user-select: none;
     box-shadow: 0px 0px 10px orangered;
     border: 1px orangered solid;
 border-radius: none;
 background-color: transparent;
-
+width: 60px;
+margin-top: -51px;
+margin-left: 148px;
+text-align: start;
 }
 .SearchBtn:hover{
     background-color: black;
@@ -147,12 +149,12 @@ background-color: transparent;
 transition: 0.3s;
 }
 .Btn1:hover, .Btn2:hover{
-    background-color: black;
     opacity: 50%;
-    color: white;
     text-decoration: underline;
 }
-
+.Btn2{
+    color:orangered
+}
 
 
 .link{
@@ -167,15 +169,15 @@ transition: 0.3s;
     border-style: none;
 background-color: orangered;
 user-select: none;
+box-shadow: 0px 0px 10px orangered;
 transition: 0.3s;
 display: inline-block;
-box-shadow: 0px 0px 10px orangered;
+border-width: 1px;
     border: 1px orangered solid;
 border-radius: none;
 background-color: transparent;
 color: white;
 background-color: rgb(20, 20, 20);
-
 }
 .Scripts:hover{
     background-color: black;
@@ -186,12 +188,15 @@ background-color: rgb(20, 20, 20);
    height: 35px;
    transition: 0.5s;
    box-shadow: 0px 0px 10px orangered;
+   border-width: 1px;
     border: 1px orangered solid;
 border-radius: none;
 background-color: transparent;
 color: white;
 background-color: rgb(20, 20, 20);
 margin-left: -5px;
+margin-top: -5px;
+border-width: 1px;
 }
 .tags:hover{
     background-color: rgb(0, 0, 0);
@@ -201,7 +206,38 @@ margin-left: -5px;
   color: white;
   opacity: 1; 
 }
-    </style>
+.link3{
+    color: black;
+}
+.taskbar{
+    background-color: black;
+    z-index: 999;
+    width: 99.99vw;
+    height: 500px;
+    margin-top: 30vw;
+    margin-bottom: -10px;
+    align-items: center;
+    user-select: none;
+}
+.BTN{
+    align-items: center;
+    text-align: center;
+    color: green;
+    font-family: sans-serif;
+    font-size: larger;
+}
+.V{
+    background-color: transparent;
+    font-family: sans-serif;
+    color: white;
+    font-size: larger;
+    margin-bottom: 50px;
+    border-style: none;
+}
+.break{
+    color: gray;
+}
+ </style>
 <div class="Topbarrr">
 
     <a class="link" href="https://sharkcores.github.io/scriptcore/">
@@ -234,6 +270,10 @@ margin-left: -5px;
     <button class="Btn1">SharkCore</button>
 </a>
 
+<a class="link3" href="https://www.sharkcores.github.io/Settings">
+    <button class="Btn2">Settings</button>
+</a>
+
 
 </div>
 
@@ -256,5 +296,22 @@ margin-left: -5px;
     </select>
     <a href="https://sharkcores.github.io/Scripts/"><Button class="tags">Find</Button></a>
 </p>
+
+<div class="taskbar">
+   <p class="BTN"> <button class="V">PC VERSION</button> </p>
+   <p class="BTN">This Website does not copy ANY other Webpages. This is a roblox Scripthub libary built/Coded
+     by 2 developers in a small development team. Our company will soon be registered and therefor making
+      this website legal. <br> Copying this Webpage without ANY permission by the developers of the 
+    original Webpage <span class="break">(</span>this Webpage<span class="break">)</span> can lead into 
+    court, and you can be fined money. Please note that this can only happen when our company is registered
+     and all of it's Websites are registered legal, but it can still lead into consequences. <br> By entering 
+     this webpage you agree to our Terms of Service <span class="break">(</span>ToS<span class="break">)</span> 
+     if not then leave this site and do not comeback until you accept our rules.
+   <br> Violating our Terms of Service <span class="break">(</span>ToS<span class="break">)</span>
+   can lead into a Warning/Ban By ROBLOX, and a Ban on this Webpage.
+   <br> If you want to join our programming team, join our discord server.
+    <br> Donating to the developers only works via our discord server.
+</p>
+</div>
 </body>
 </html>
