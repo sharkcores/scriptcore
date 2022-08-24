@@ -465,12 +465,14 @@ document.getElementById("Scripts").onclick = function(){
 document.getElementById("Alls1").onclick = function(){
     document.getElementById("tagss").href="https://sharkcores.github.io/Scripts/";
     document.getElementById("Scripts").innerHTML="All Scripts"
+    document.getElementById("categories").style.visibility="hidden"
   
 }
 document.getElementById("Alls2").onclick = function(){
     console.log("Link set")
     document.getElementById("Scripts").innerHTML="Bypass Scripts"
      document.getElementById("tagss").href="https://sharkcores.github.io/bypassScripts/";
+     document.getElementById("categories").style.visibility="hidden"
 }
 document.getElementById("tags").onmouseenter = function(){
     document.getElementById("categories").style.visibility="hidden"
