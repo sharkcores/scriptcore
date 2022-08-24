@@ -161,7 +161,7 @@ transition: 0.3s;
     color: black;
 }
 
-.Scripts, .Scripts2{
+#Scripts, #Scripts2{
     height: 35px;
     background-color: black;
     color: white;
@@ -170,7 +170,7 @@ transition: 0.3s;
 background-color: orangered;
 user-select: none;
 box-shadow: 0px 0px 10px orangered;
-transition: 0.3s;
+transition: 0.2s;
 display: inline-block;
 border-width: 1px;
     border: 1px orangered solid;
@@ -179,11 +179,10 @@ background-color: transparent;
 color: white;
 background-color: rgb(20, 20, 20);
 }
-.Scripts:hover{
-    background-color: black;
-    color: white;
+#Scripts:hover{
+    text-decoration: underline;
 }
-.tags{
+#tags{
    border-style: none;
    height: 35px;
    transition: 0.5s;
@@ -218,6 +217,7 @@ border-width: 1px;
     margin-bottom: -10px;
     align-items: center;
     user-select: none;
+    margin-top: 300px;
 }
 .BTN{
     align-items: center;
@@ -236,6 +236,56 @@ border-width: 1px;
 }
 .break{
     color: gray;
+}
+#categories{
+    width: 350px;
+    height: 200px;
+    box-shadow: 0px 0px 10px orangered;
+   border-width: 1px;
+    border: 1px orangered solid;
+border-radius: none;
+background-color: transparent;
+}
+#Alls1, #Alls2{
+    width:50px;
+    width: 70px;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 10px orangered;
+    border-width: 1px;
+    border: 1px orangered solid;
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 0s;
+    display: inline-block;
+
+}
+#Alls1:hover{
+    text-decoration: underline;
+    background-color: black;
+}
+#Alls2:hover{
+    text-decoration: underline;
+    background-color: black;
+}
+#Close{
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 10px orangered;
+    border-width: 1px;
+    border: 1px orangered solid;
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    display: inline-block;
+    margin-top: 85px;
+    height: 50px;
+    width: 200px;
+    font-size: 35px;
+    margin-left: 76px;
 }
  </style>
 <div class="Topbarrr">
@@ -283,35 +333,53 @@ border-width: 1px;
         <div style="background-color: black; border-radius: 10px; border: 1px black solid;" class="MainContent">   
         <h1 class="Title">   ScriptCore   </h1> <br>
         <p class="slogan">Greatest Script Libary</p>
+
+
+
         
     </div>
     <h1 class="TypeBox"> <input class="TypeBox2" type="text" placeholder="Search the Libary"> </h1> 
 
 
 <a href="https://sharkcores.github.io/Issue/"><button class="SearchBtn">Search</button></a>
-
-<p class="Scripts2">
-    <select name="Scripts" class="Scripts">
-      <option value="NewestScripts">All Scripts</option>
-    </select>
-    <a href="https://sharkcores.github.io/Scripts/"><Button class="tags">Find</Button></a>
+<p>
+<button id="Scripts">All Scripts</button>
+    <a href="https://sharkcores.github.io/Scripts/" id="tagss"><Button id="tags">Find</Button></a>
 </p>
+<div id="categories">
+    <button id="Alls1">All Scripts</button>
+    <button id="Alls2">Bypass Scripts</button>
+    <button id="Close">Close</button>
 
-<div class="taskbar">
-   <p class="BTN"> <button class="V">PC VERSION</button> </p>
-   <p class="BTN">This Website does not copy ANY other Webpages. This is a roblox Scripthub libary built/Coded
-     by 2 developers in a small development team. Our company will soon be registered and therefor making
-      this website legal. <br> Copying this Webpage without ANY permission by the developers of the 
-    original Webpage <span class="break">(</span>this Webpage<span class="break">)</span> can lead into 
-    court, and you can be fined money. Please note that this can only happen when our company is registered
-     and all of it's Websites are registered legal, but it can still lead into consequences. <br> By entering 
-     this webpage you agree to our Terms of Service <span class="break">(</span>ToS<span class="break">)</span> 
-     if not then leave this site and do not comeback until you accept our rules.
-   <br> Violating our Terms of Service <span class="break">(</span>ToS<span class="break">)</span>
-   can lead into a Warning/Ban By ROBLOX, and a Ban on this Webpage.
-   <br> If you want to join our programming team, join our discord server.
-    <br> Donating to the developers only works via our discord server.
-</p>
+
+   
+
 </div>
+
+</p>
+<script>
+    const name1 = document.getElementById("tags")
+    document.getElementById("Close").onclick = function(){
+        document.getElementById("categories").style.visibility="hidden"
+    }
+
+    document.getElementById("categories").style.visibility="hidden"
+document.getElementById("Scripts").onmouseenter = function(){
+    document.getElementById("categories").style.visibility="visible"
+}
+
+
+document.getElementById("Alls1").onclick = function(){
+    document.getElementById("tagss").href="https://sharkcores.github.io/Scripts/";
+    document.getElementById("Scripts").innerHTML="All Scripts"
+  
+}
+document.getElementById("Alls2").onclick = function(){
+    console.log("Link set")
+    document.getElementById("Scripts").innerHTML="Bypass Scripts"
+     document.getElementById("tagss").href="https://www.sharkcores.github.io/bypassScripts/";
+}
+
+</script>
 </body>
 </html>
