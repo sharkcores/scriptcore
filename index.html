@@ -47,6 +47,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    user-select: none;
 }
 body{
     background-position: center;
@@ -60,7 +61,7 @@ body{
    margin-top:  10px;
 }
 .MainContent{
-    margin-top: 120px;
+    margin-top: 100px;
     display: flex;
     display: block;
     align-items: center;
@@ -81,7 +82,7 @@ transition: 0.3s;
     border-width: 1px;
 }
 
-.TypeBox2{
+#TypeBox2{
     border-style: none;
     outline: none;
     text-align: center;
@@ -95,10 +96,10 @@ transition: 0.3s;
     border: 1px orangered solid;
 border-radius: none;
 background-color: transparent;
-width: 140px;
-margin-left: -66px;
+width: 200px;
+margin-left: -0px;
 }
-.SearchBtn{
+#SearchBtn{
     border-style: none;
     padding-left: 8px;
     padding-right: 25px;
@@ -116,11 +117,11 @@ margin-top: -51px;
 margin-left: 148px;
 text-align: start;
 }
-.SearchBtn:hover{
+#SearchBtn:hover{
     background-color: black;
     color: white;
 }
-.TypeBox2:hover{
+#TypeBox2:hover{
     background-color: black;
     color: white;
 }
@@ -178,9 +179,11 @@ border-radius: none;
 background-color: transparent;
 color: white;
 background-color: rgb(20, 20, 20);
+transition: 0.3s;
 }
 #Scripts:hover{
     text-decoration: underline;
+    background-color: black;
 }
 #tags{
    border-style: none;
@@ -265,12 +268,32 @@ user-select: none;
     display: inline-block;
 
 }
+#awd{
+    width:80px;
+    height: 40px;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 10px orangered;
+    border-width: 1px;
+    border: 1px orangered solid;
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-left: 0px;
+    transition: 0s;
+    display: inline-block;
+    transition: 0.3s;
+}
 #Alls1:hover{
     text-decoration: underline;
     background-color: black;
 }
 #Alls2:hover{
     text-decoration: underline;
+    background-color: black;
+}
+#awd:hover{
     background-color: black;
 }
 #Close{
@@ -288,6 +311,43 @@ user-select: none;
     width: 200px;
     font-size: 35px;
     margin-left: 76px;
+}
+#close:hover{
+    background-color: black;
+}
+#helpbox{
+    display: inline-block;
+    margin-left: -130px;
+    margin-top: -154.5px;
+    border-style: solid;
+    box-shadow: 0px 0px 10px orangered;
+    border-width: 1px;
+    border: 1px orangered solid;
+    background-color: transparent;
+    color: white;
+    height: 23px;
+    transition: 0.3s;
+}
+#helpbox:hover{
+    background-color: black;
+}
+#helppox{
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px orangered;
+    border-width: 1px;
+    border: 1px orangered solid;
+    color: white;
+    margin-left: -520px;
+    margin-top: -259px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.phelper{
+    font-family: sans-serif;
+    font-size: larger;
+    margin-left: 38px;
 }
  </style>
 <div class="Topbarrr">
@@ -340,14 +400,33 @@ user-select: none;
 
         
     </div>
-    <h1 class="TypeBox"> <input class="TypeBox2" type="text" placeholder="Search the Libary"> </h1> 
+  
+
+    
+    
+
+    <h1 class="TypeBox"> <input id="TypeBox2" type="text" placeholder="Search the Libary"> </h1> 
 
 
-<a href="https://sharkcores.github.io/Issue/"><button class="SearchBtn">Search</button></a>
+<a href="https://sharkcores.github.io/Issue/" id="fakenews"><button id="SearchBtn">Search</button></a>
+<button id="awd">Check</button>
 <p>
 <button id="Scripts">All Scripts</button>
     <a href="https://sharkcores.github.io/Scripts/" id="tagss"><Button id="tags">Search</Button></a>
 </p>
+
+
+<div>
+    <button id="helpbox">?</button>
+</div>
+
+<div id="helppox">
+    <p class="phelper">What you can seach <br><br><br>1. "all scripts"
+        <br><br><br>2. "bypass scripts"
+    </p>
+</div>
+
+
 <div id="categories">
     <button id="Alls1">All Scripts</button>
     <button id="Alls2">Bypass Scripts</button>
@@ -360,13 +439,25 @@ user-select: none;
 
 </p>
 <script>
+    document.getElementById("helppox").style.visibility="hidden"
+    document.getElementById("helpbox").onmouseenter = function(){
+        document.getElementById("helppox").style.visibility="visible"
+    }
+    document.getElementById("helpbox").onmouseleave = function(){
+        document.getElementById("helppox").style.visibility="hidden"
+    }
+    document.getElementById("SearchBtn").onclick = function(){
+        document.getElementById("TypeBox2").value=""
+    }
+     document.getElementById("SearchBtn").style.visibility="hidden"
+    document.getElementById("categories").style.visibility="hidden"
     const name1 = document.getElementById("tags")
     document.getElementById("Close").onclick = function(){
         document.getElementById("categories").style.visibility="hidden"
     }
 
     document.getElementById("categories").style.visibility="hidden"
-document.getElementById("Scripts").onmouseenter = function(){
+document.getElementById("Scripts").onclick = function(){
     document.getElementById("categories").style.visibility="visible"
 }
 
@@ -384,6 +475,41 @@ document.getElementById("Alls2").onclick = function(){
 document.getElementById("tags").onmouseenter = function(){
     document.getElementById("categories").style.visibility="hidden"
 }
+document.getElementById("awd").onclick = function(){
+    if(document.getElementById("TypeBox2").value=="bypass scripts"){
+        document.getElementById("fakenews").href="https://sharkcores.github.io/bypassScripts/"
+        document.getElementById("SearchBtn").style.visibility="visible"
+        document.getElementById("TypeBox2").style.width="140px"
+        document.getElementById("TypeBox2").style.marginLeft="-66px"
+        document.getElementById("awd").innerHTML="Available"
+        async function waiter() {
+         console.log('start timer');
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          document.getElementById("awd").innerHTML("Check");
+          document.getElementById("awd").innerHTML("Check");
+        }
+    }
+    else if(document.getElementById("TypeBox2").value=="all scripts"){
+        document.getElementById("fakenews").href="https://sharkcores.github.io/Scripts/"
+        document.getElementById("SearchBtn").style.visibility="visible"
+        document.getElementById("TypeBox2").style.width="140px"
+        document.getElementById("TypeBox2").style.marginLeft="-66px"
+        document.getElementById("awd").innerHTML="Available"
+
+    }
+    else(document.getElementById("awd").innerHTML="Not Available", 
+    document.getElementById("TypeBox2").style.width="200px",
+    document.getElementById("TypeBox2").style.marginLeft="0px", 
+    document.getElementById("SearchBtn").style.visibility="hidden",
+    async function waiter() {
+         console.log('start timer');
+          await new Promise(resolve => setTimeout(resolve, 2000));
+         console.log('resetting'),
+        document.getElementById("awd").innerHTML("Check")
+    }
+    )
+}
+
 </script>
 </body>
 </html>
