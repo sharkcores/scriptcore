@@ -492,7 +492,9 @@ document.getElementById("awd").onclick = function(){
         document.getElementById("TypeBox2").style.width="140px"
         document.getElementById("TypeBox2").style.marginLeft="-60px"
         document.getElementById("awd").innerHTML="Available"
-
+        setTimeout(function() {
+  document.getElementById("awd").innerHTML="Check";
+}, 1000);
     }
     else if(document.getElementById("TypeBox2").value=="all scripts"){
         document.getElementById("fakenews").href="https://sharkcores.github.io/Scripts/"
