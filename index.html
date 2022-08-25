@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScriptCore/Home</title>
-    <link rel="stylesheet" href="C:\Users\Alex\Desktop\vs\ScriptCore.css">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="https://www.fomei.com/ew/ew_images/image_of_object?ObjectIdentifier=pli:2086d47b-689e-4810-8471-0ec4faf02533&Filter=85137656-c904-4612-b68a-427bba3d9247&ImageIndex=0&FailImage=bc5af4e7-5c19-45bc-b8a0-4a183c53d6ea">
 </head>
 <body>
 
@@ -71,11 +71,13 @@ body{
 border-radius: none;
 background-color: transparent;
 margin-bottom: 20px;
-border-radius: 0px;
+border-radius: 0px; 
+background-color:  rgb(29, 29, 29);
 transition: 0.3s;
+border-radius: 5px;
 }
 
-
+.MainContent{ width: auto; height: auto; }
 .MainContent:hover{
     opacity: 50%;
     border-style: solid;
@@ -127,13 +129,15 @@ text-align: start;
 }
 
 .Topbarrr{
-    background-color: black;
+    background-color:  rgb(29, 29, 29);
     z-index: 999;
     user-select: none;
     width: 100vw;
     position: fixed;
     margin-top: -8px;
-    
+    box-shadow: 0px 0px 20px rgb(8, 8, 8);
+    border: 1px black solid;
+border-radius: none;
 }
 
 .Btn1, .Btn2{
@@ -142,7 +146,7 @@ text-align: start;
     border-radius: 5px;
     width: 100px;
     height: 40px;
-    background-color: black;
+    background-color:  rgb(29, 29, 29);
     font-size: larger;
     color: white;
     font-family: sans-serif;
@@ -159,7 +163,7 @@ transition: 0.3s;
 
 
 .link{
-    color: black;
+    color: transparent;
 }
 
 #Scripts, #Scripts2{
@@ -270,7 +274,7 @@ user-select: none;
 }
 #awd{
     width:80px;
-    height: 40px;
+    height: 30px;
     text-align: center;
     border-style: solid;
     box-shadow: 0px 0px 10px orangered;
@@ -318,7 +322,7 @@ user-select: none;
 #helpbox{
     display: inline-block;
     margin-left: -130px;
-    margin-top: -154.5px;
+    margin-top: -145.5px;
     border-style: solid;
     box-shadow: 0px 0px 10px orangered;
     border-width: 1px;
@@ -392,7 +396,7 @@ user-select: none;
 </div>
 
 
-        <div style="background-color: black; border-radius: 10px; border: 1px black solid;" class="MainContent">   
+        <div class="MainContent">   
         <h1 class="Title">   ScriptCore   </h1> <br>
         <p class="slogan">Greatest Script Libary</p>
 
@@ -411,6 +415,7 @@ user-select: none;
 <a href="https://sharkcores.github.io/Issue/" id="fakenews"><button id="SearchBtn">Search</button></a>
 <button id="awd">Check</button>
 <p>
+
 <button id="Scripts">All Scripts</button>
     <a href="https://sharkcores.github.io/Scripts/" id="tagss"><Button id="tags">Search</Button></a>
 </p>
@@ -438,14 +443,16 @@ user-select: none;
 </div>
 
 </p>
+
 <script>
     document.getElementById("helppox").style.visibility="hidden"
-    document.getElementById("helpbox").onmouseenter = function(){
-        document.getElementById("helppox").style.visibility="visible"
-    }
     document.getElementById("helpbox").onmouseleave = function(){
         document.getElementById("helppox").style.visibility="hidden"
     }
+    document.getElementById("helpbox").onmouseenter = function(){
+        document.getElementById("helppox").style.visibility="visible"
+    }
+    
     document.getElementById("SearchBtn").onclick = function(){
         document.getElementById("TypeBox2").value=""
     }
@@ -455,13 +462,14 @@ user-select: none;
     document.getElementById("Close").onclick = function(){
         document.getElementById("categories").style.visibility="hidden"
     }
-
     document.getElementById("categories").style.visibility="hidden"
+    document.getElementById("Scripts").onclick = function(){
+            document.getElementById("categories").style.visibility="hidden"
+        }
 document.getElementById("Scripts").onclick = function(){
     document.getElementById("categories").style.visibility="visible"
+
 }
-
-
 document.getElementById("Alls1").onclick = function(){
     document.getElementById("tagss").href="https://sharkcores.github.io/Scripts/";
     document.getElementById("Scripts").innerHTML="All Scripts"
@@ -484,34 +492,28 @@ document.getElementById("awd").onclick = function(){
         document.getElementById("TypeBox2").style.width="140px"
         document.getElementById("TypeBox2").style.marginLeft="-66px"
         document.getElementById("awd").innerHTML="Available"
-        async function waiter() {
-         console.log('start timer');
-          await new Promise(resolve => setTimeout(resolve, 2000));
-          document.getElementById("awd").innerHTML("Check");
-          document.getElementById("awd").innerHTML("Check");
-        }
+
     }
     else if(document.getElementById("TypeBox2").value=="all scripts"){
         document.getElementById("fakenews").href="https://sharkcores.github.io/Scripts/"
         document.getElementById("SearchBtn").style.visibility="visible"
         document.getElementById("TypeBox2").style.width="140px"
-        document.getElementById("TypeBox2").style.marginLeft="-66px"
+        document.getElementById("TypeBox2").style.marginLeft="-60px"
         document.getElementById("awd").innerHTML="Available"
+        setTimeout(function() {
+  document.getElementById("awd").innerHTML="Check";
+}, 1000);
 
     }
-    else(document.getElementById("awd").innerHTML="Not Available", 
+    else(document.getElementById("awd").innerHTML="Invalid", 
     document.getElementById("TypeBox2").style.width="200px",
     document.getElementById("TypeBox2").style.marginLeft="0px", 
     document.getElementById("SearchBtn").style.visibility="hidden",
-    async function waiter() {
-         console.log('start timer');
-          await new Promise(resolve => setTimeout(resolve, 2000));
-         console.log('resetting'),
-        document.getElementById("awd").innerHTML("Check")
-    }
+    setTimeout(function() {
+  document.getElementById("awd").innerHTML="Check";
+}, 1000)
     )
 }
-
 </script>
 </body>
 </html>
